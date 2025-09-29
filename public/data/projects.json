@@ -19,13 +19,14 @@
         "title": "MyHiddenDrawer",
         "description": "Progetto full stack e-commerce responsive sviluppato in team, con API REST e frontend in React.",
         "tech": [
-            "Node.js",
+            "NodeJS",
+            "Express",
             "React",
             "MySQL",
             "Bootstrap"
         ],
         "image": "/assets/myhiddendrawer.png",
-        "github": "https://github.com/vincenzo-terracciano/myhiddendrawer",
+        "github": "https://github.com/mattiacoli/myHiddenDrawer",
         "demo": "#"
     }
 ]
