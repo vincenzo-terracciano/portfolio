@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "title": "VoyaGo",
+        "description": "Web app full stack per la gestione e organizzazione di viaggi, con backend in Laravel e frontend in React.",
+        "tech": [
+            "Laravel",
+            "PHP",
+            "React",
+            "Bootstrap",
+            "MySQL"
+        ],
+        "image": "/assets/voyago.png",
+        "github": "https://github.com/vincenzo-terracciano/laravel-travel",
+        "demo": "#"
+    },
+    {
+        "id": 2,
+        "title": "MyHiddenDrawer",
+        "description": "Progetto full stack e-commerce responsive sviluppato in team, con API REST e frontend in React.",
+        "tech": [
+            "Node.js",
+            "React",
+            "MySQL",
+            "Bootstrap"
+        ],
+        "image": "/assets/myhiddendrawer.png",
+        "github": "https://github.com/vincenzo-terracciano/myhiddendrawer",
+        "demo": "#"
+    }
+]
