@@ -1,47 +1,69 @@
 import { motion } from "framer-motion";
-import Typing from "./Typing";
+import Typing from "./Typing"; // Componente typing da creare
 import './Hero.css';
 
 export default function Hero() {
     return (
-        <section className="w-full min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-0">
+        <section className="relative mt-16 text-center px-4 md:px-0 min-h-[80vh] flex flex-col justify-center">
 
-            {/* Titolo con glow pulsante */}
-            <motion.h1
+            {/* Titolo */}
+            <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-4xl md:text-6xl font-extrabold text-black dark:text-white"
+                transition={{ duration: 0.6 }}
+                className="text-4xl md:text-6xl font-extrabold leading-tight relative z-10"
             >
-                Ciao, sono <span className="glow-text">Vincenzo</span>
-            </motion.h1>
+                <Typing
+                    text="Ciao, sono "
+                    speed={50}
+                    delay={0}
+                />
+                <span className="animated-gradient">
+                    <Typing
+                        text="Vincenzo"
+                        speed={50}
+                        delay={600}
+                    />
+                </span>
+            </motion.h2>
 
-            {/* Sottotitolo con typing */}
+            {/* Sottotitolo */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="mt-4 text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl"
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="mt-4 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto text-lg md:text-xl relative z-10"
             >
-                <Typing text={`Junior Full Stack Web Developer.\nTrasformo idee in esperienze digitali moderne.`} speed={50} />
+                <p className="font-semibold">
+                    <Typing
+                        text="Junior Full Stack Web Developer."
+                        speed={40}
+                        delay={1500}
+                    />
+                </p>
+                <Typing
+                    text="Trasformo idee in esperienze digitali moderne."
+                    speed={40}
+                    delay={2800}
+                />
             </motion.div>
 
             {/* Pulsanti */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2, duration: 0.8 }}
-                className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
+                transition={{ delay: 4, duration: 0.6 }}
+                className="mt-8 flex flex-col sm:flex-row justify-center gap-4 relative z-10"
             >
                 <a
                     href="#projects"
-                    className="px-8 py-3 rounded-full bg-brand-blue text-white font-medium shadow-lg hover:scale-105 transition-all duration-300"
+                    className="px-8 py-3 rounded-full bg-brand-blue text-white font-medium shadow-xl hover:scale-105 transition-transform duration-300"
                 >
                     Scopri i miei progetti
                 </a>
                 <a
                     href="#contact"
-                    className="px-8 py-3 rounded-full border border-brand-blue text-brand-blue font-medium shadow-lg hover:bg-brand-blue hover:text-white transition-all duration-300"
+                    className="px-8 py-3 rounded-full border border-brand-blue text-brand-blue font-medium shadow-xl hover:scale-105 hover:bg-brand-blue hover:text-white transition-all duration-300"
                 >
                     Contattami
                 </a>
