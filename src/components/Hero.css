@@ -26,6 +26,7 @@
             /* ritorno al blu */
         );
     background-size: 1000% 1000%;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientMove 20s ease infinite;

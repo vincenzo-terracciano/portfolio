@@ -11,7 +11,7 @@
             "MySQL"
         ],
         "image": "/assets/voyago.png",
-        "github": "https://github.com/vincenzo-terracciano/laravel-travel",
+        "github": "https://github.com/vincenzo-terracciano/react-travel",
         "demo": "#"
     },
     {
@@ -27,6 +27,87 @@
         ],
         "image": "/assets/myhiddendrawer.png",
         "github": "https://github.com/mattiacoli/myHiddenDrawer",
+        "demo": "#"
+    },
+    {
+        "id": 3,
+        "title": "Boolflix",
+        "description": "Replica di Netflix con catalogo film, ricerca e pagine dettagliate, con frontend in React.",
+        "tech": [
+            "React",
+            "JavaScript",
+            "CSS",
+            "Bootstrap"
+        ],
+        "image": "/assets/voyago.png",
+        "github": "#",
+        "demo": "#"
+    },
+    {
+        "id": 4,
+        "title": "Comics DC",
+        "description": "Replica della pagina ufficiale DC Comics, layout responsive e interattivo con animazioni CSS.",
+        "tech": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "image": "/assets/myhiddendrawer.png",
+        "github": "#",
+        "demo": "#"
+    },
+    {
+        "id": 5,
+        "title": "BooRoad",
+        "description": "App di gestione itinerari e mappe interattive per viaggiatori, con backend NodeJS e frontend React.",
+        "tech": [
+            "React",
+            "NodeJS",
+            "Express",
+            "MySQL"
+        ],
+        "image": "/assets/voyago.png",
+        "github": "#",
+        "demo": "#"
+    },
+    {
+        "id": 6,
+        "title": "Portfolio Personale",
+        "description": "Portfolio digitale con animazioni moderne, effetti di typing e gradient dinamico.",
+        "tech": [
+            "React",
+            "Tailwind",
+            "Framer Motion"
+        ],
+        "image": "/assets/voyago.png",
+        "github": "#",
+        "demo": "#"
+    },
+    {
+        "id": 7,
+        "title": "Chat App",
+        "description": "Applicazione di chat in tempo reale con notifiche, emoji e interfaccia moderna.",
+        "tech": [
+            "React",
+            "NodeJS",
+            "Express",
+            "Socket.IO"
+        ],
+        "image": "/assets/myhiddendrawer.png",
+        "github": "#",
+        "demo": "#"
+    },
+    {
+        "id": 8,
+        "title": "Weather App",
+        "description": "App meteo con API esterne, interfaccia interattiva e animazioni delle condizioni climatiche.",
+        "tech": [
+            "React",
+            "JavaScript",
+            "CSS"
+        ],
+        "image": "/assets/myhiddendrawer.png",
+        "github": "#",
         "demo": "#"
     }
 ]

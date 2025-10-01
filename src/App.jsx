@@ -1,14 +1,28 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import ProjectCard from "./components/ProjectCard";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 function App() {
 
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
+
+  const titleRef = useRef(null);
+
+  // Scroll collegato al titolo
+  const { scrollYProgress } = useScroll({
+    target: titleRef,
+    offset: ["center end", "start center"],
+  });
+
+  // Animazioni collegate allo scroll
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const y = useTransform(scrollYProgress, [0, 1], [30, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.95, 1]);
 
   useEffect(() => {
     fetch("/data/projects.json")
@@ -18,6 +32,7 @@ function App() {
         setLoading(false);
       });
   }, [])
+
 
   return (
     <>
@@ -29,16 +44,32 @@ function App() {
             <main>
               <Hero />
 
-              <section id="projects" className="mt-16">
-                <h2 className="text-3xl font-bold text-center text-black dark:text-white">Progetti</h2>
+              <section id="projects" className="mt-16 relative">
+                <motion.div
+                  ref={titleRef}
+                  style={{
+                    opacity: useTransform(scrollYProgress, [0, 1], [0, 1]),   // comparsa graduale
+                    scale: useTransform(scrollYProgress, [0, 1], [0.5, 1]),  // parte molto piccola, arriva a 1
+                    y: useTransform(scrollYProgress, [0, 1], [50, 0]),       // leggero movimento verticale
+                  }}
+                  className="text-center mb-24"
+                >
+                  <h2 className="text-6xl font-extrabold text-brand-blue">
+                    Progetti
+                  </h2>
+                  <p className="mt-4 text-gray-500 dark:text-gray-300 text-lg">
+                    Dai un'occhiata ai miei lavori più recenti
+                  </p>
+                </motion.div>
+
                 {loading ? (
                   <p className="text-center text-gray-500 mt-8">
                     Caricamento progetti...
                   </p>
                 ) : (
-                  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((p) => (
-                      <ProjectCard key={p.id} project={p} />
+                  <div className="mt-12 flex flex-col items-center gap-12">
+                    {projects.map((p, index) => (
+                      <ProjectCard key={p.id} project={p} index={index} />
                     ))}
                   </div>
                 )}
